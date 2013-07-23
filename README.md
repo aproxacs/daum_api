@@ -8,7 +8,7 @@ Gem으로 배포하지는 않았다. 아직은 완성도가 떨어져서 별 실
 
 사용을 위해서는 github를 이용한다.
 
-    gem 'daum_api', git: "http://github.com/aproxacs/daum_api"
+    gem 'daum_api', git: "git@github.com:aproxacs/daum_api.git"
 
 
 ## 사용 예
