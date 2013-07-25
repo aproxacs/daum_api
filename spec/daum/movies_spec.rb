@@ -24,9 +24,9 @@ describe Daum::Movies do
     its(:query) { should == query }
     its(:page) { should == 1 }
 
-    it "each iterates movie which is Hashie::Mash" do
+    it "each iterates movie which is Movie instance" do
       movies.each do |movie|
-        movie.should be_instance_of(Hashie::Mash)
+        movie.should be_instance_of(Daum::Movie)
       end
     end
 

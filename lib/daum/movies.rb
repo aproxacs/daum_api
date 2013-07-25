@@ -22,12 +22,13 @@ module Daum
 
     attr :total_count, :page, :query
     def initialize(json)
-      objs = Hashie::Mash.new(JSON.parse(json)["channel"])
-      @total_count = objs.totalCount
-      @query = objs.q
-      @page = objs.page
+      objs = JSON.parse(json)["channel"]
+      @total_count = objs["totalCount"]
+      @query = objs["q"]
+      @page = objs["page"]
 
-      super(objs.item)
+      movies = objs["item"].map {|item| Movie.new(item)}
+      super(movies)
     end
 
   end
