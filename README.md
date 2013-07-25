@@ -26,12 +26,12 @@ API_KEY는 [DNA 개발자 네트워크](dna.daum.net)에서 발급받을 수 있
     puts movies.query
     puts movies.page
     movies.each do |movie|
-      puts movie.genre.map(&:content)
-      puts movie.title.first.content
+      puts movie.genres
+      puts movie.title
     end
 
 * Daum::Movies는 Array를 상속한 영화들의 Collection이다.
-* movies.each 블록의 movie는 Hashie::Mash 객체로 내용은 API의 결과값 중 item의 내용이다.
+* movies.each 블록의 movie는 Daum::Movie 객체다. 
 
 
 ## 개발에 참여하기
